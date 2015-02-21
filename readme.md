@@ -119,4 +119,47 @@ The following files were found in C:/Users/Main/AppData/Local/Temp/ and they app
 
 Virus total provides us info for [update.exe](https://www.virustotal.com/en/file/aec4b4872e0a060c9f67f1fc637f54a2a338bf925ea2df9af9748c5e736795fc/analysis/) that appears to make sense. One of the first hits is **Crypt3.BVYS**
 
-Opening the binary in IDA reveals about what you'd expect, packed all over the place LZMA code.
+Opening the binary in IDA reveals about what you'd expect, packed all over the place LZMA code. Running it in IDA, it appears that this section of code is where the pop up message becomes displayed:
+
+    .text:00403E1A ; __fastcall __security_check_cookie(x)
+    .text:00403E1A @__security_check_cookie@4 proc near    ; CODE XREF: sub_401000+160p
+    .text:00403E1A                                         ; sub_40121D+A9Fp ...
+    .text:00403E1A
+    .text:00403E1A ; FUNCTION CHUNK AT .text:004041B0 SIZE 00000009 BYTES
+    .text:00403E1A
+    .text:00403E1A                 cmp     ecx, ds:___security_cookie
+
+After running, it not only encrypts files, but it does the following other items (at least it appears to have the capability to do so):
+  * Install fake root CAs: /CN=www.xl4wvq5mrqdmhg.net
+  * Has a crap ton of python: <tr><td>C:\Python27\Lib\test\</td><td>https_svn_python_org_root.PEM</td></tr>
+  * We also see that Stepan is a dick?:
+    * f:\stepan\openssl/ssl/certs
+    * f:\stepan\openssl/ssl/cert.pem
+  * It has it's own TOR client: Sina Rabbani (inf0)
+  * Appears to turn off / disable A/V & firewall (or at least encourages such)
+  * Calls out to ip.telize.com to log where you're coming from
+  * Takes and sends off the picture of your "user" for your Window's login
+
+These look to be close to the "real" function names:
+
+    tiscreentext
+    titextfile
+    tihtmlfile
+    tiwelcome
+    tiinfopage
+    tisearchfiles
+    tifoundfiles
+    titestdone
+    tinofoundfiles
+    tirequestkey
+    tireqfailed
+    tioffline
+    tipaid
+    tipayment
+    tisupport
+    tisupportpage
+    tisupportsend
+    tiexchange
+    tidecrypting
+    tidecryptdone
+    titimeexpired
