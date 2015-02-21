@@ -94,9 +94,6 @@ Interesting Strings for **2D1C.xml** (there's a lot more, but these popped out t
     c:\Users\
     \AppData\Local\Temp
 
-
-
-
 ### Digging Deeper
 Jonathan:
 
