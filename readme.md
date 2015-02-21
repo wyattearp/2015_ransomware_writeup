@@ -66,6 +66,7 @@ I remember an email that I got that looked similar and poked around for it. I fo
     11548     	0x2D1C    	XML document, version: "1.0"
 
 Files:
+
     [wyatt@lazarus:~/Downloads/ransomware]$ find .
     .
     ./_label_52740071.doc.extracted
@@ -87,6 +88,7 @@ Files:
     ./label_52740071.doc
 
 Interesting Strings for **2D1C.xml** (there's a lot more, but these popped out to me):
+
     PROJECT.THISDOCUMENT.H
     PROJECT.THISDOCUMENT.AUTOOPEN
     PROJECT.THISDOCUMENT.FINDTEST
@@ -109,3 +111,12 @@ Jonathan:
     virus is NOT self-replicating, and sends ONLY the public key to the victim
     virus is self-replicating, and the private key is included in this base32-encoded blob that the user inputs.
     if wyatt can access the payload, i'd love to reverse the block that prints this "public key" to see how it's made.
+
+The following files were found in C:/Users/Main/AppData/Local/Temp/ and they appear to the actual files we're interested in:
+
+    4ff7a6a944aace86a2534354f67601a73851f3333b99256d5a3d27d5b4a54780  jwmbmfl.exe
+    aec4b4872e0a060c9f67f1fc637f54a2a338bf925ea2df9af9748c5e736795fc  update.exe
+
+Virus total provides us info for [update.exe](https://www.virustotal.com/en/file/aec4b4872e0a060c9f67f1fc637f54a2a338bf925ea2df9af9748c5e736795fc/analysis/) that appears to make sense. One of the first hits is **Crypt3.BVYS**
+
+Opening the binary in IDA reveals about what you'd expect, packed all over the place LZMA code.
