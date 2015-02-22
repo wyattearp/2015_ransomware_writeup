@@ -104,7 +104,11 @@ Interesting Strings for **2D1C.xml** (there's a lot more, but these popped out t
 >
 > i'll bet the "id" field is the key in a database table that contains the public/private keys, with possible bindings to bitcoin address.  but...
 >
-> the public key appears to be presented in base32, but the math doesn't work out:  7 characters * 8 columns * 3 rows * 5/8 bits/characters for base32 * 8 bits/byte = 840-bit key.  since this is nonstandard, i'll bet there's additional data included, such as that "id" or (maybe, if we're lucky, the private key itself)
+> the public key appears to be presented in base32, but the math doesn't work out:
+>
+>     7 characters * 8 columns * 3 rows * 5/8 bits/characters for base32 * 8 bits/byte = 840-bit key.
+>
+> since this is nonstandard, i'll bet there's additional data included, such as that "id" or (maybe, if we're lucky, the private key itself).
 >
 > if the virus is self-propagating, then it must do key generation on the fly, which means that it needs to transmit the private key to the server somehow.  the lazy way to do this is to just include it with the "public key" that the web app takes as input.  doing so ensures that they can always accept money, even if the private key never made it to the server beforehand.  also, this makes the onion node stateless (no database), which is attractive for hiding from law enforcement.
 >
