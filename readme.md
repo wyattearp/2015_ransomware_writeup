@@ -108,7 +108,7 @@ Interesting Strings for **2D1C.xml** (there's a lot more, but these popped out t
 >
 > the public key appears to be presented in base32, but the math doesn't work out:
 >
->     7 characters * 8 columns * 3 rows * 5/8 bits/characters for base32 * 8 bits/byte = 840-bit key
+>     (7 characters * 8 columns * 3 rows) * 5 bits/character for base32 = 840-bit key
 >
 > since this is nonstandard, i'll bet there's additional data included, such as that "id" or (maybe, if we're lucky, the private key itself).
 >
