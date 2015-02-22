@@ -98,7 +98,7 @@ Interesting Strings for **2D1C.xml** (there's a lot more, but these popped out t
     \AppData\Local\Temp
 
 ### Digging Deeper
-@JElchison:
+[@JElchison](https://github.com/JElchison):
 
 > confirmed that the landing page is identical per public key, i also ended up at http://43qzvceo6ondd6wt.onion/payment?id=28aa15bb5241fe2054c3a74a112400a4
 >
