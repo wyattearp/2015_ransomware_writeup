@@ -25,6 +25,7 @@ One of my wife's co-workers managed to catch a crap piece of ransomware this las
     This electronic mail transmission and any attached files contain information intended for the exclusive use of the individual or entity to whom it is addressed and may contain information belonging to the sender (USPS , Inc.) that is proprietary, privileged, confidential and/or protected from disclosure under applicable law. If you are not the intended recipient, you are hereby notified that any viewing, copying, disclosure or distributions of this electronic message are violations of federal law. Please notify the sender of any unintended recipients and delete the original message without making any copies.  Thank You
 
 I fired up the system ... which of course wouldn't boot, so I pulled the drive and then started poking and found a How To Decrypt.html file:
+
     Your documents, photos, databases and other important files have been encrypted with strongest encryption and unique key, generated for this computer.
     Private decryption key is stored on a secret Internet server and nobody can decrypt your files until you pay and obtain the private key.
     If you see the main locker window, follow the instructions on the locker.
