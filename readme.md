@@ -106,7 +106,7 @@ Interesting Strings for **2D1C.xml** (there's a lot more, but these popped out t
 >
 > the public key appears to be presented in base32, but the math doesn't work out:
 >
->     7 characters * 8 columns * 3 rows * 5/8 bits/characters for base32 * 8 bits/byte = 840-bit key.
+>     7 characters * 8 columns * 3 rows * 5/8 bits/characters for base32 * 8 bits/byte = 840-bit key
 >
 > since this is nonstandard, i'll bet there's additional data included, such as that "id" or (maybe, if we're lucky, the private key itself).
 >
@@ -117,7 +117,7 @@ Interesting Strings for **2D1C.xml** (there's a lot more, but these popped out t
 >  * virus is NOT self-replicating, and sends ONLY the public key to the victim
 >  * virus is self-replicating, and the private key is included in this base32-encoded blob that the user inputs.
 >
-> if wyatt can access the payload, i'd love to reverse the block that prints this "public key" to see how it's made.
+> if [@wyattearp](https://github.com/wyattearp) can access the payload, i'd love to reverse the block that prints this "public key" to see how it's made.
 
 The following files were found in C:/Users/Main/AppData/Local/Temp/ and they appear to the actual files we're interested in:
 
