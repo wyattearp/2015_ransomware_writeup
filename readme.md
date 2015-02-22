@@ -3,11 +3,11 @@ One of my wife's co-workers managed to catch a crap piece of ransomware this las
 
 > Our company’s courier couldn’t make the delivery of package.
 >
-> REASON: Postal code contains an error.
-> DELIVERY STATUS: Sort Order
-> SERVICE: One-day Shipping
-> NUMBER OF YOUR PARCEL: USPS00272452
-> FEATURES: No
+>     REASON: Postal code contains an error.
+>     DELIVERY STATUS: Sort Order
+>     SERVICE: One-day Shipping
+>     NUMBER OF YOUR PARCEL: USPS00272452
+>     FEATURES: No
 >
 > Label is enclosed to the letter in .doc format.
 > Print a label and show it at your post office.
